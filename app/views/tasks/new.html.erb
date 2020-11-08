@@ -1,0 +1,6 @@
+<h1>Project: <%=@task.project.title%></h1>
+<h2>New Task</h2>
+
+<%= render 'form', task: @task %>
+
+<%= link_to 'Back', tasks_path %>
