@@ -9,6 +9,13 @@
   </head>
 
   <body>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+    <p> User logged in: <%= current_user.email if user_signed_in? %> </p>
+
     <%= yield %>
+    
+    <% console %>
   </body>
 </html>
