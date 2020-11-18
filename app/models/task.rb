@@ -1,4 +1,6 @@
 class Task < ApplicationRecord
 	belongs_to :project
-	# belongs_to :user, through: :projects
+
+	validates :title, length: { in: 2..80 }, presence: true
+	validates_associated :project
 end
