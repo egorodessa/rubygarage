@@ -3,7 +3,8 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
-  <<: *default
+  adapter: sqlite3
+  # <<: *default
   database: myapp_development
 
 # Warning: The database defined as "test" will be erased and
